@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+        <link   rel="stylesheet"  href="myprofile.css">
+         <link   rel="stylesheet"  href="style.css">
+
+
+
+    <title>The Meme Store</title>
+</head>
+
+<body>
+<section id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+
+            <a class="navbar-brand" href="/home-login"><img src="./images/df807120-7bab-4b25-8bf3-588962468cb0_200x200.png"
+                    id="logo"  style="height: 55px" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home-login" style="color:white;">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about-us-login" style="color:white;">ABOUT-US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact-us-login" style="color:white;">CONTACT-US</a>
+                    </li>
+                </ul>
+               <form class="form-inline my-2 my-lg-0">
+                        
+                         <a href="/user"><i class="fa fa-user" aria-hidden="true"></i></a>
+                         <button type="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px  "  data-toggle="modal" data-target="#exampleModalCenter">
+                          Upload
+                        </button>
+                        {{!-- <button class="btn btn-outline-dange my-2 my-sm-0" type="submit" style="margin: 10px; color: #fff;">Upload Image</button> --}}
+                        
+                         <a id="logout" href="/logout">
+                       <button type="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px " >
+                           Logout
+                         </button>
+                        
+                        </a>
+                        
+
+                         
+                    {{!-- <button class="btn btn-outline-dange my-2 my-sm-0" type="submit" style="margin: 10px; color: #fff;">Login / Sign-up</button> --}}
+                </form>
+            </div>
+        </nav>
+
+    </section>
+
+
+ <!-- For demo purpose -->
+<div class="row">
+    <div class="col-lg-7 mx-auto text-white text-center pt-5">
+        <h1 class="display-4" style="color: #218599;">My PROFILE PAGE</h1>
+    </div>
+</div><!-- End -->
+
+
+<div class="row py-5 px-4">
+    <div class="col-xl-8 col-md-6 col-sm-10 mx-auto">
+
+        <!-- Profile widget -->
+        <div class="bg-white shadow rounded overflow-hidden">
+            <div class="px-4 pt-0 pb-4 bg-dark">
+                <div class="media align-items-end profile-header">
+                    <div class="profile mr-3"><a style="color:white" href="/home-login" class="btn btn-dark btn-sm btn-block">GO TO HOME</a></div>
+                    <div class="profile mr-3"><a href="/edit" class="btn btn-dark btn-sm btn-block">Edit profile</a></div>
+					
+                    <br> <br>
+                   
+                    <div class="media-body mb-5 text-white">
+                        <h4 class="mt-0 mb-5" style="text-align:left;margin:80px;">Welcome Mr/Miss:
+						 <span id="uname">{{username}}</span></h4>
+                        <br>
+                         <h4 class="mt-0 mb-5" style="text-align:left;margin:80px;">Your mail is:
+						 <span id="umail">{{email}}</span></h4>
+                    </div>
+                </div>
+
+                 
+            </div>
+			<br>
+            <div class="py-4 px-4">
+                <div > <br><br>
+                    <h5 class="mb-0"> Meme Uploaded:</h5>
+                </div> <br>
+                <div class="row d-flex" style="overflow:auto;">
+                	
+					<div class="col-lg-6 mb-2 pr-lg-1" style="display:inline-block;margin-left:10px;" id="crd">
+                        
+                        {{!-- <img src="{{data.url}}" alt="" class="img-fluid rounded shadow-sm"> --}}
+                        
+                        </div>
+
+					  </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+ <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Great!Want to upload something.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <form  action = "/Upload" method = "post"  enctype = "multipart/form-data" >
+         <input type="text" name="name"  placeholder="Title" style="width:70%;border-radius: 10px; border:#28a745 solid 1px;" required></br></br>
+         <input type="text" name="username"  placeholder="username" style="width:70%;border-radius: 10px; border:#28a745 solid 1px;" required></br></br>
+         <input  id = "input"   class="btn btn-outline-success my-2 my-sm-0"  type = "file"   name = "memes" required>
+          {{!-- <button  id = "button" class="btn btn-outline-success my-2 my-sm-0"  type = "submit"  >Upload</button></br></br> --}}
+          <button  id = "button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" type = "submit"  >Upload</button></br></br>
+     
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" data-dismiss="modal">Close</button> 
+     
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="footer" style="color:#218599 !important;
+    font-weight: 600; margin-left: 2%">
+
+        <div>&copy; copyright</div>
+        <h2>THE MEME STORE</h2>
+
+    </div>
+ <script src="myuimage.js"></script>
+</body>
+  
+
+</html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

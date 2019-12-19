@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{style}}">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>The Meme Store</title>
+</head>
+
+<body >
+     
+    <section id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+
+            <a class="navbar-brand" href="/"><img src="./images/df807120-7bab-4b25-8bf3-588962468cb0_200x200.png"
+                    id="logo" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" style="color:white;">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about-us" style="color:white;">ABOUT-US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact-us" style="color:white;">CONTACT-US</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                        
+                         <button type="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px  " data-toggle="modal" data-target="#exampleModalCenter1" >
+                          Upload
+                        </button>
+                        {{!-- <button class="btn btn-outline-dange my-2 my-sm-0" type="submit" style="margin: 10px; color: #fff;">Upload Image</button> --}}
+                        <button type="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px " data-toggle="modal" data-target="#exampleModalCenter1">
+                          Login/SignUp
+                         </button>
+                        
+                        
+
+                         
+                    {{!-- <button class="btn btn-outline-dange my-2 my-sm-0" type="submit" style="margin: 10px; color: #fff;">Login / Sign-up</button> --}}
+                </form>
+                
+            </div>
+        </nav>
+      
+    </section> <br>
+
+    <section id="main-body" > 
+         <div class="container-fluid" >
+
+        <div class="row" >
+            <div class="col-2" >
+
+                <h2 style="font-size:2vw;color:#218599;"> Categories </h2>
+                <br>
+
+                    <ul style="list-style-type:none;">
+                            
+                            <li style="margin: 15px" id="Fun"> <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;"> #Funny </button>  </li>
+                            <li style="margin: 15px" id="Hum">  <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60%;"> #Humor  </button> </li>
+                            <li style="margin: 15px" id="Sch">  <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599;border:.4px solid red; " style="font-size:1.1vw;width:60%;">  #School  </button> </li>
+                            
+                            <li style="margin: 15px" id="Sar">  <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599;border:.4px solid red; " style="font-size:1.1vw;width:60%;"> #Sarcasm </button> </li>
+                            <li style="margin: 15px" id="Awe">  <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599;border:.4px solid red; "style="font-size:1.1vw;width:60%;">  #Awesome  </button> </li>
+                            <li style="margin: 15px" id="userUpload">  <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60%;">  #UserUploads  </button> </li>
+                          </ul>  
+                
+
+            </div>
+
+            {{!-- <div class="vl" ></div> --}}
+
+            <div class="col-9 vl">
+               
+
+                    <div id="crd" class="row card-columns" style="left-margin: 10px">
+                        {{!-- <div class="col-4"> --}}
+                             {{!-- <div id="crd"style="margin: 20px">
+ --}}
+                        
+                        </div>
+                      
+               
+                    </div>
+            
+                <div class="col-1 " style="Height:708px;position:fixed;left:91%;top:10%;" >
+                 <marquee scrollamount="9" loop="infinite" behavior="scroll" width="100%" direction="down" height="100%">
+                <table><tbody><tr>
+                 <td id="Funny" style="padding: 30px 0px;">  <div class="card" style="width: 98px;border:#218599 solid 1.5px;border-radius:10px;">
+                    <img class="card-img-top" src="https://pics.me.me/thumb_so-funny-i-forgot-to-laugh-1410132.png" alt="Card image cap"style="border-radius:10px 10px 0px 0px;">
+                    <div class="card-body" style="text-align:left;padding:0px;margin:2.5px;background-color:#E5FFFD;"  >
+                      Funny
+                    
+                     </div>
+
+
+                    </div>
+                    </td></tr>
+                    <tr > <td id="Humor" style="padding: 30px 0px;"> <div class="card" style="width: 98px;border:#218599 solid 1.5px;border-radius:10px;">
+                    <img class="card-img-top" src="http://quotesnhumor.com/wp-content/uploads/2015/07/Top-25-Funny-Memes-Funnies.jpg" alt="Card image cap"style="border-radius:10px 10px 0px 0px;">
+                    <div class="card-body" style="text-align:left;padding:0px;margin:2.5px;background-color:#E5FFFD;">
+                       Humor
+                    
+                     </div>
+                    </div></td>
+                    </tr><tr>
+                     <td id="Awesome" style="padding: 30px 0px;"> <div class="card" style="width: 98px;border:#218599 solid 1.5px;border-radius:10px;" >
+                    <img class="card-img-top" src="https://sayingimages.com/wp-content/uploads/double-thumbs-up-awesome-meme.png" style="border-radius:10px 10px 0px 0px;" alt="Card image cap">
+                    <div class="card-body" style="text-align:left;padding:0px;margin:2.5px;background-color:#E5FFFD;">
+                       Awesome
+                    
+                     </div>
+                    </div></td>
+                     </tr><tr>
+                     <td id="Sarcasm" style="padding: 30px 0px;"><div class="card" style="width: 98px;border:#218599 solid 1.5px;border-radius:10px;" >
+                    <img class="card-img-top" src="https://sayingimages.com/wp-content/uploads/look-and-guess-what-sarcastic-memes.png" style="border-radius:10px 10px 0px 0px;" alt="Card image cap">
+                    <div class="card-body" style="text-align:left;padding:0px;margin:2.5px;background-color:#E5FFFD;">
+                       Sarcasm
+                    
+                     </div>
+                    </div></td>
+                    </tr><tr>
+                     <td id="School" style="padding: 30px 0px; "> <div class="card" style="width: 98px;border:#218599 solid 1.5px;border-radius:10px;">
+                    <img class="card-img-top" src="https://cdn.ebaumsworld.com/mediaFiles/picture/2165492/84809085.jpg" style="border-radius:10px 10px 0px 0px;" alt="Card image cap">
+                    <div class="card-body" style="text-align:left;padding:0px;margin:2.5px;background-color:#E5FFFD;">
+                       School
+                    
+                     </div>
+                    </div></td>
+                
+                     </tr>
+                    </tbody></table></marquee>
+</div>
+
+
+              
+
+
+          
+                 
+            </div>
+
+            
+
+            {{!-- <div class="vl"></div>
+
+            <div class="col" id="right"> --}}
+
+                {{!-- <h3> Share On </h3> <br>
+
+                <button class="btn btn-primary"> <i class="fa fa-facebook-square" aria-hidden="true" style="margin: 10px ;"></i> </button>
+                <button class="btn btn-primary"> <i class="fa fa-google" aria-hidden="true" style="margin: 10px ;"></i>  </button> 
+                <button class="btn btn-primary">  <i class="fa fa-instagram" aria-hidden="true" style="margin: 10px ;"></i> </button>
+                <button class="btn btn-primary">  <i class="fa fa-twitter" aria-hidden="true" style="margin: 10px ;"></i> </button>
+ --}}
+                  {{!-- // <div class='container'> --}}
+                   {{!-- <h2 class="row" style="font-size:2vw;" > Here We Go </h2> --}}
+                  
+{{!-- </marquee></div> --}}
+
+          
+            </div>
+
+    </section>
+   
+    <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Great!Want to upload something.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <form  action = "/upload" method = "post"  enctype = "multipart/form-data" >
+         <input type="text" name="name"  placeholder="Title" style="width:70%;border-radius: 10px; border:#28a745 solid 1px;"></br></br>
+         <input type="text" name="username"  placeholder="username" style="width:70%;border-radius: 10px; border:#28a745 solid 1px;"></br></br>
+         <input  id = "input"   class="btn btn-outline-danger my-2 my-sm-0"  type = "file"   name = "memes">
+          {{!-- <button  id = "button" class="btn btn-outline-danger my-2 my-sm-0"  type = "submit"  >Upload</button></br></br> --}}
+          <button  id = "button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" type = "submit"  >Upload</button></br></br>
+     
+        </form>
+      </div>
+      <div class="modal-footer">
+         <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" data-dismiss="modal">Close</button> 
+     
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Great!Want to Login/SignUP .</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           
+           <label>LOGIN HERE:</label>
+           <form action = "/verify" method ="POST">
+           <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                 </div>
+               <div class="form-group">
+               <label for="exampleInputPassword1">Password</label>
+             <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+              </div>
+               
+                 <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" >Submit</button>
+     
+         </form> <br>
+         {{!-- <button type="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; width:100%; background-color:#28a745;" data-toggle="modal" data-target="#exampleModalCenter2"> --}}
+          <button type="button" class=" btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;"data-toggle="modal" data-target="#exampleModalCenter2">
+        
+                          Signup
+                         </button>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" data-dismiss="modal">Close</button> 
+     
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Great!Want to Signup .</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           <form action="/add" method="post">
+
+           
+            <div class="form-group">
+              <label for="exampleInput">UserName</label>
+              <input type="text" class="form-control" id="exampleInput"  name="username" aria-describedby="emailHelp" placeholder="Enter Your Name">
+               
+                 </div>
+
+           <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                 </div>
+               <div class="form-group">
+               <label for="exampleInputPassword1">Password</label>
+             <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+              </div>
+              
+                {{!-- <button type="submit" class="btn btn-primary">Submit</button> --}}
+                <button type="submit" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" >Submit</button>
+     
+         </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" data-dismiss="modal">Close</button> 
+     
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Modal -->
+<div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Great!Take a copy </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <img src="" id="galleryImage" class="img-responsive" style="width:100%" />
+          <div id="galleryText" ></div>
+            
+          {{!-- <button  id = "button" class="btn btn-outline-danger my-2 my-sm-0"  type = "submit"  >copy</button> --}}
+          <button id="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" type = "submit"  >copy</button> 
+   
+        </form>
+      </div>
+      <div class="modal-footer">
+        {{!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> --}}
+        <button type="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" data-dismiss="modal">Close</button> 
+      </div>
+    </div>
+  </div>
+</div> <br> <hr> <br>
+
+    <div class="footer" style="color:#218599 !important;
+    font-weight: 600; margin-left: 2%">
+
+        <div>&copy; copyright</div>
+        <h2>THE MEME STORE</h2>
+
+    </div>
+<script>$('#share').on('show.bs.modal', function (e) {
+        $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
+         $('#galleryText').text($(e.relatedTarget).data("src")); 
+});</script>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+     
+     <script src="Awesome.js"></script>
+     <script src="Funny.js"></script>
+     <script src="Humor.js"></script>
+     <script src="Sarcasm.js"></script>
+     <script src="School.js"></script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,271 @@
+ <section id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+
+            <a class="navbar-brand" href="/"><img src="../images/df807120-7bab-4b25-8bf3-588962468cb0_200x200.png"
+                    id="logo" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" style="color:white;">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about-us" style="color:white;">ABOUT-US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact-us" style="color:white;">CONTACT-US</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                        
+                         <button type="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px  " data-toggle="modal" data-target="#exampleModalCenter1" >
+                          Upload
+                        </button>
+                        {{!-- <button class="btn btn-outline-dange my-2 my-sm-0" type="submit" style="margin: 10px; color: #fff;">Upload Image</button> --}}
+                        <button type="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px " data-toggle="modal" data-target="#exampleModalCenter1">
+                          Login/SignUp
+                         </button>
+                        
+                        
+
+                         
+                    {{!-- <button class="btn btn-outline-dange my-2 my-sm-0" type="submit" style="margin: 10px; color: #fff;">Login / Sign-up</button> --}}
+                </form>
+                
+            </div>
+        </nav>
+      
+    </section> <br>
+<br>
+<br>
+<div>
+    <h1 style="text-align: center;color:#218599; ">This is funny image</h1> <br>
+    <div class="imgPost" id="crd"></div>
+    <br>
+</div> <br>
+
+<form class="form-inline">
+    <div class="imgbutton container ">
+        <button id="previous" type="button">Last</button>
+        <button id="upvote" type="button">Upvote</button>
+        <button id="next" type="button"><span>Next </span></button>
+        <br>
+        <br>
+       {{#each arr}}
+         <div class="container" style="border:2px red solid;border-radius:25px;">Username:{{this.username}} <pre></pre>Comment:{{this.comment}}</div>
+               <br>
+        {{/each}}
+
+
+        <div id="sign" style="color:white;"></div>
+        <p></p>
+        <br>
+
+        <input type="text" class="form-control" id="username" name="username" placeholder="enter username" />
+
+        <input type="text" class="form-control" id="newcomment" name="comment" placeholder="Type your comment" />
+        <button id="cmmnt" type="button">Comment</button><br><br>
+
+    </div>
+</form>
+<br> <br>  <hr> <br>
+
+ <div class="footer" style="color:#218599 !important;
+    font-weight: 600; margin-left: 2%">
+
+        <div>&copy; copyright</div>
+        <h2>THE MEME STORE</h2>
+
+    </div>
+ <!-- Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Great!Want to Login/SignUP .</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           
+           <label>LOGIN HERE:</label>
+           <form action = "/verify" method ="POST">
+           <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                 </div>
+               <div class="form-group">
+               <label for="exampleInputPassword1">Password</label>
+             <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+              </div>
+               
+                 <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" >Submit</button>
+     
+         </form> <br>
+         {{!-- <button type="button" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; width:100%; background-color:#28a745;" data-toggle="modal" data-target="#exampleModalCenter2"> --}}
+          <button type="button"class=" btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;"data-toggle="modal" data-target="#exampleModalCenter2">
+        
+                          Signup
+                         </button>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" data-dismiss="modal">Close</button> 
+     
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Great!Want to Signup .</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           <form action="/add" method="post">
+
+           
+            <div class="form-group">
+              <label for="exampleInput">UserName</label>
+              <input type="text" class="form-control" id="exampleInput"  name="username" aria-describedby="emailHelp" placeholder="Enter Your Name">
+               
+                 </div>
+
+           <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                 </div>
+               <div class="form-group">
+               <label for="exampleInputPassword1">Password</label>
+             <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+              </div>
+              
+                {{!-- <button type="submit" class="btn btn-primary">Submit</button> --}}
+                <button type="submit" class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" >Submit</button>
+     
+         </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-danger my-2 my-sm-0" style="margin: 10px; color: #fff; border-radius: 25px;background-color: #218599; border:.4px solid red;" style="font-size:1.1vw;width:60px;" data-dismiss="modal">Close</button> 
+     
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>$(document).ready(function(){
+    var ur = $(location).attr('href');
+    var part = ur.split("/");
+    var har = part[part.length - 1]
+
+  if(har<=50)
+   { $.ajax({
+   url: 'https://raw.githubusercontent.com/rishabh-verma-au3/MyJavaStuffs/master/meme.json',
+   type: 'GET',
+     success: function (data) {
+   // console.log(window.location);
+   //window.location.hash = '';
+    data = JSON.parse(data);
+     $("#crd").empty();
+//  $('#crd').append("<div class='card-deck' id='dec' style='width:100%;'></div>")
+     var url = $(location).attr('href');
+      var parts = url.split("/");
+   var hard = parts[parts.length - 1] - 1
+   for (var i = 0; i < data.length; i++) { // data=JSON.stringify(data);
+    if ((i) == hard) {
+    // $("#crd").append("<div class='col-4' style='width:100%;margin-bottom:1%;'><div class='card' style='width: 100%;'><div style='text-align:center;background-color:#28a745;'> " + data[(i-1)].category + "</div> <img src=" + data[(i-1)].url + " class='card-img-top' alt='...' width='" + 400 + "px' height='" + 400 + "px'><div class='card-body' style='height:100%;width:100%;' style='font-size:2vw;'><h5 class='card-title' style='font-size:2vw;'>" + data[(i-1)].name + "</h5></div></div></div>")
+    $('#crd').append("<img src="+data[i].url+" class='card-img-top'+ style='border-radius:25px' +alt='...' width='"+data[i].width+"px' height='"+data[i].height+"px' >")
+
+}
+
+}
+
+}
+})}
+
+   if(har>50)
+   {
+        $.ajax({
+        url: '/blog',
+        type: 'GET',
+          success: function (data) {
+        // console.log(window.location);
+        // console.log(data);
+        //window.location.hash = '';
+         //data = JSON.parse(data);
+          $("#crd").empty();
+     //  $('#crd').append("<div class='card-deck' id='dec' style='width:100%;'></div>")
+          var url = $(location).attr('href');
+           var parts = url.split("/");
+        var hard = parts[parts.length - 1]
+        //console.log(hard);
+        for (var i = 0; i < data.length; i++) { // data=JSON.stringify(data);
+         if (data[i].id == hard) {
+        //  $("#crd").append("<div class='col-4' style='width:100%;margin-bottom:1%;'><div class='card' style='width: 100%;'><div style='text-align:center;background-color:#28a745;'> " + data[i].category + "</div> <img src=" + data[i].url + " class='card-img-top' alt='...' width='" + 400 + "px' height='" + 400 + "px'><div class='card-body' style='height:100%;width:100%;' style='font-size:2vw;'><h5 class='card-title' style='font-size:2vw;'>" + data[i].name + "</h5></div></div></div>")
+          $('#crd').append("<img src="+data[i].url+"  class='card-img-top' alt='...' style='border-radius:25px;' width='"+data[i].width+"px' height='"+data[i].height+"px'>")
+              break;   
+     }
+     
+     }
+     
+     }
+     })
+
+
+
+
+
+
+
+   }
+
+
+
+
+}) 
+
+$("#previous").on('click',function(){
+    var url = $(location).attr('href');
+    var parts = url.split("/");
+    var hard = parts[parts.length - 1];
+    window.location.replace("/NotLoginPost/"+parseInt(hard-1) );
+ })
+ $("#next").on('click',function(){
+    var url = $(location).attr('href');
+    var parts = url.split("/");
+    var hard = parts[parts.length - 1];
+    var n=1;
+    window.location.replace("/NotLoginPost/"+(+parseInt(hard)+(+1)));
+ })
+
+ 
+        $("#upvote").on('click', function () {
+            alert("not login")
+
+        })
+    // this for comment
+    $("#cmmnt").on('click', function () {
+        $('#username').val('');
+        $('#newcomment').val('');
+        alert("You are not login")
+
+    })
+</script>   
